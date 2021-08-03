@@ -100,7 +100,7 @@
         android:layout_marginLeft="37dp"
         android:layout_marginTop="62dp"
         android:ems="10"
-        android:text="Indoor Temp:"
+        android:text="Indoor Temp (F):"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -122,7 +122,7 @@
         android:layout_marginStart="44dp"
         android:layout_marginLeft="44dp"
         android:layout_marginTop="36dp"
-        android:text="Outdoor Temp:"
+        android:text="Outdoor Temp (F):"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewIndoorHumidity" />
 
@@ -136,6 +136,17 @@
         android:text="Outdoor Humidity %:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewOutdoorTemp" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginLeft="161dp"
+        android:layout_marginTop="29dp"
+        android:text="Reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

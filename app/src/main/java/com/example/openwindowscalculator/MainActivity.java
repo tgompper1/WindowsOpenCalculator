@@ -2,6 +2,7 @@ package com.example.openwindowscalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView waterDensity, windowOpen, textViewIndoorTemp, textViewOutdoorTemp, textViewIndoorHumidity, textViewOutdoorHumidity;
     EditText editTextIndoorTemp, editTextOutdoorTemp, editTextIndoorHumidity, editTextOutdoorHumidity;
-    Button calculate;
+    Button calculate, reset;
     String waterDensityVal;
 
     @Override
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         calculate = (Button)findViewById(R.id.calculate);
-
+        reset = (Button)findViewById(R.id.reset);
         waterDensity = (TextView)findViewById(R.id.waterDensityField);
         windowOpen = (TextView)findViewById(R.id.windowOpenField);
 
@@ -107,6 +108,15 @@ public class MainActivity extends AppCompatActivity {
                     windowOpen.setText("You should turn on the AC");
                 }
 
+            }
+        });
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
             }
         });
         //indoorTemp=26;
